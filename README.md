@@ -19,12 +19,15 @@ The first challenge with this project was how to accurately quantify school succ
 The Quality Review data also included a variety of other information about schools, such as school's racial makeup, demographic information, and a number of qualitative survey response categories (e.g. Supportive Environment, Strong Family Community Ties, etc). However, I also wanted to include information of schools' funding and spending categories, in order to, for one, see if the total amount of funding/or spending impacted success (e.g. better funded schools = more or less successful?), two, see if the category of spending impacted success (e.g. spending more on teacher salaries, classroom material, teacher training, etc = more or less successful?), and three, see if the source of school funding impacted success (e.g. more local funding vs federal funding = more or less successful). The New York State Education Department has this categorized information available of their data site, but the only downloadable files of this data that I found were in a format that required paid software to read, so instead, I wrote a script to navigate the web pages and parse the necessary data from the html pages.
 - Source: [NYSED Data site district pages](https://data.nysed.gov/lists.php?start=78&type=district) (I pulled data from the Funding Transparency Reports for each school in each NYC district.)
 ### Code
-- Notebook: [Data Acquisition Process](https://github.com/edithalice/nyc_school_success/blob/master/1.%20Data%20Collection%20and%20Cleaning.ipynb)
-- Python Script: [Web Scraping](https://github.com/edithalice/nyc_school_success/blob/master/scrape_nysed.py) - designed to be run from the command line, but explained in the above notebook  
-#### Python Modules (utilized and explained in above notebook)
-- [Data Cleaning (Quality Review)](https://github.com/edithalice/nyc_school_success/blob/master/success.py)
-- [Data Cleaning (NYSED Data)](https://github.com/edithalice/nyc_school_success/blob/master/finance.py)
-- [Merging Data](https://github.com/edithalice/nyc_school_success/blob/master/merge_sets.py) - the two data sources were inconsistent in naming practices, making it necessary to use string matching functions to merge the two datasets
+#### Notebook
+- [Data Acquisition Process](https://github.com/edithalice/nyc_school_success/blob/main/1_Data.ipynb)
+#### Python Script and Modules
+Script run from the command line, but explained in the above notebook  
+- [Web Scraping](https://github.com/edithalice/nyc_school_success/blob/main/code/scrape_nysed.py)
+Modules utilized and explained in above notebook
+- [Data Cleaning (Quality Review)](https://github.com/edithalice/nyc_school_success/blob/main/code/success.py)
+- [Data Cleaning (NYSED Data)](https://github.com/edithalice/nyc_school_success/blob/main/code/finance.py)
+- [Merging Data](https://github.com/edithalice/nyc_school_success/blob/main/code/merge_sets.py) - the two data sources were inconsistent in naming practices, making it necessary to use string matching functions to merge the two datasets
 
 
 ## Modeling Process
@@ -36,8 +39,10 @@ After some experimentation, I decided to use a Yeoman-Johnson power transform to
 I found that the feature with the highest impact on academic success was attendance rate.
 ### Code
 #### Notebooks
-- [EDA and Feature Engineering](https://github.com/edithalice/nyc_school_success/blob/master/2.%20Feature%20Exploration%20and%20Engineering.ipynb)
-- [Feature Selection and Modeling](https://github.com/edithalice/nyc_school_success/blob/master/3.%20Feature%20Selection%20and%20Model%20Fitting.ipynb)
+- [EDA and Feature Engineering](https://github.com/edithalice/nyc_school_success/blob/main/2_EDA.ipynb)
+- [Feature Selection and Modeling](https://github.com/edithalice/nyc_school_success/blob/main/3_Modeling.ipynb)
+#### Python Module
+- [Utility Functions](https://github.com/edithalice/nyc_school_success/blob/main/code/utility_functions.py)
 
 ## Main Tools Used
 ### Data Acquisition and Cleaning
@@ -59,15 +64,15 @@ I found that the feature with the highest impact on academic success was attenda
 
 ## Deliverables
 ### Notebooks
-- [Data Acquisition Process](https://github.com/edithalice/nyc_school_success/blob/master/1.%20Data%20Collection%20and%20Cleaning.ipynb)
-- [EDA and Feature Engineering](https://github.com/edithalice/nyc_school_success/blob/master/2.%20Feature%20Exploration%20and%20Engineering.ipynb)
-- [Modeling](https://github.com/edithalice/nyc_school_success/blob/master/3.%20Feature%20Selection%20and%20Model%20Fitting.ipynb)
+- [Data Acquisition Process](https://github.com/edithalice/nyc_school_success/blob/main/1_Data.ipynb)
+- [EDA and Feature Engineering](https://github.com/edithalice/nyc_school_success/blob/main/2_EDA.ipynb)
+- [Modeling](https://github.com/edithalice/nyc_school_success/blob/main/3_Modeling.ipynb)
 ### Python Modules
-- [Web Scraping](https://github.com/edithalice/nyc_school_success/blob/master/scrape_nysed.py)
-- [Data Cleaning (Quality Review)](https://github.com/edithalice/nyc_school_success/blob/master/success.py)
-- [Data Cleaning (NYSED Data)](https://github.com/edithalice/nyc_school_success/blob/master/finance.py)
-- [Merging DataFrames](https://github.com/edithalice/nyc_school_success/blob/master/merge_sets.py)
-- [Utility Functions](https://github.com/edithalice/nyc_school_success/blob/master/utility_functions.py) (used in EDA and modelling processes)
+- [Web Scraping](https://github.com/edithalice/nyc_school_success/blob/main/code/scrape_nysed.py)
+- [Data Cleaning (Quality Review)](https://github.com/edithalice/nyc_school_success/blob/main/code/success.py)
+- [Data Cleaning (NYSED Data)](https://github.com/edithalice/nyc_school_success/blob/main/code/finance.py)
+- [Merging DataFrames](https://github.com/edithalice/nyc_school_success/blob/main/code/merge_sets.py)
+- [Utility Functions](https://github.com/edithalice/nyc_school_success/blob/main/code/utility_functions.py) (used in EDA and modeling processes)
 ### Presentation
 - [Google Slides](https://docs.google.com/presentation/d/1Jhjqel9jXJb--Zxp2vGh2CEPhIQRUi5mXUQnX2cSLAA/edit?usp=sharing)
-- [PDF](https://github.com/edithalice/nyc_school_success/blob/master/presentation.pdf)
+- [PDF](https://github.com/edithalice/nyc_school_success/blob/main/presentation.pdf)
